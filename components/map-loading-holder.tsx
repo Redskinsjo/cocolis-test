@@ -1,11 +1,9 @@
 import WorldIcon from "./world-icon";
 
-function MapLoadingHolder() {
-  return (
-    <div className="loading-holder">
-      <WorldIcon className="icon" />
-    </div>
-  );
-}
+const MapLoadingHolder = () => (
+  <div className="loading-holder" data-test="map-loader">
+    <WorldIcon className="icon" />
+  </div>
+);
 
 export default MapLoadingHolder;

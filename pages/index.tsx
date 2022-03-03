@@ -25,7 +25,8 @@ function App({ rides }: { rides: any }) {
       {loaded && (
         <button
           className="load-more"
-          onClick={() => setSize((size) => (size += 1))}
+          // Permits to update the size of the list and load more courses
+          onClick={() => setSize((size) => (size += 5))}
         >
           Charger plus de courses
         </button>
@@ -36,6 +37,8 @@ function App({ rides }: { rides: any }) {
 
 export async function getStaticProps() {
   const result = await axios.get("https://staging.cocolis.fr/es/rides/_search");
+
+  // Format the ride object to add a random color right after fetch
   const rides = result.data.hits.hits.map((ride: any) => ({
     ...ride,
     _color: randomColor(),

@@ -14,6 +14,7 @@ const Rides = ({ rides }: { rides: IRide[] }) => (
       flexDirection: "column",
       alignItems: "center",
     }}
+    data-test="list"
   >
     {rides.map((r: any) => (
       <div key={r._id} className="ride-unit">

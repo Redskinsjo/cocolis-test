@@ -19,6 +19,7 @@ function MapboxMap({
 
   const mapNode = useRef(null);
 
+  // Add the markers to the map and store the map
   const getNewMap = (map: any) => {
     rides.forEach((r: any) => {
       new mapboxgl.Marker()
@@ -32,6 +33,7 @@ function MapboxMap({
     return map;
   };
 
+  // Add the lines to the map
   const setMapLayers = (map: any) => {
     rides.forEach((r: any) => {
       if (!map.getSource(r._id)) {
