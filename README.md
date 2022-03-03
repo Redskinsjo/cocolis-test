@@ -15,5 +15,6 @@
 
 - Cloner le repo
 - Installer les dépendences ``` yarn install```
-- Lancer l'app en dev: ```yarn dev```
-- Vérifier dans localhost:3000
+- Lancer l'app en dev: ```yarn test```. Cela va lancer les tests en même temps.
+- Vérifier dans localhost:3000.
+- Vérifier le test coverage: ```yarn coverage:open```
